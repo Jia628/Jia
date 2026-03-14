@@ -32,7 +32,8 @@ enableEmoji = true
   orgLocal = "Anywhere"
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/favicon.ico"
-  logo = "/img/blogophonic-mark-dark.png"
+  # logo = "/img/blogophonic-mark-dark.png"
+  siteLogo = "About me"
   mainSections = ["research", "education", "teaching", "conference"]
   navallcaps = true
   # show/hide social icons in site header & footer
@@ -55,7 +56,7 @@ enableEmoji = true
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename
-  custom_theme = "" 
+  custom_theme = "custom" 
   
   # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
