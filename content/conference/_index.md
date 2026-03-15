@@ -2,6 +2,7 @@
 title: Talks and Conferences
 description: |
   <span style="font-size:1.2em;">I have traveled to the following workshops and conferences, where you may have seen me.</span>
+  <span style="display:block;text-align:left;color:#77186a;font-size:1.6em;font-weight:700;margin-top:1.5rem;margin-bottom:0.2rem;margin-left:0;padding-left:0;text-indent:0;">Seminar and Workshop Talks</span>
 
 show_post_thumbnail: true
 show_author_byline: false
@@ -15,6 +16,7 @@ sidebar:
   title: Talks and Conferences
   description: |
     <span style="font-size:1.2em;">I have traveled to the following workshops and conferences, where you may have seen me.</span>
+    <span style="display:block;text-align:left;color:#77186a;font-size:1.6em;font-weight:700;margin-top:1.5rem;margin-bottom:0.2rem;margin-left:0;padding-left:0;text-indent:0;">Seminar and Workshop Talks</span>
     Even this sidebar offers a ton of customizations.
     
     Check out the _index.md file in the /talk folder 

@@ -1,5 +1,7 @@
 ---
-title: "Lorem Arrested Development"
+title: "Project Asst-Grader/Reader"
+display_title: "Project Asst-Grader/Reader - Math 742: Abstract Algbebra II"
+display_date: "Spring 2024"
 subtitle: "How to add panelsets in R Markdown posts."
 excerpt: "Add tabbed sections with code and results."
 date: 2021-05-24

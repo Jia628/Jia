@@ -1,7 +1,8 @@
 ---
 title: "Lorem Star Wars"
 subtitle: "How to add panelsets in plain markdown posts."
-excerpt: "Add tabbed sections to your posts."
+display_title: "Teaching Assistant - Math 221: Calculus and Analytic Geometry I"
+display_date: "Fall 2024"
 date: 2021-05-25
 author: "Alison Hill"
 draft: false

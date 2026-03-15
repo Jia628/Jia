@@ -112,13 +112,13 @@ enableEmoji = true
     url = "/conference/"
     weight = 2
   [[menu.header]]
-    name = "education"
-    title = "Education"
+    name = "teaching"
+    title = "Teaching"
     url = "/education/"
     weight = 3
   [[menu.header]]
-    name = "teaching"
-    title = "Teaching"
+    name = "cv"
+    title = "CV"
     url = "/teaching/"
     weight = 4
     

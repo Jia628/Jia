@@ -1,5 +1,7 @@
 ---
-title: "A third post"
+title: "Project Asst-Grader/Reader"
+display_title: "Project Asst-Grader/Reader - Math 113: Trigonometry"
+display_date: "Fall 2023"
 weight: 3
 subtitle: ""
 excerpt: "Grid is the very first CSS module created specifically to solve the layout problems we’ve all been hacking our way around for as long as we’ve been making websites."

@@ -1,0 +1,32 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="blog-intro mw7 center mb3">
+    <h2 class="f2 f1-ns lh-solid tc center fw4">{{ .Title | markdownify }}</h2>
+    <span style="display:block;text-align:left;color:#77186a;font-size:1.6em;font-weight:700;margin-top:1rem;margin-bottom:0.4rem;">Univerisity of Wisconsin-Madison</span>
+  </section>
+
+  <section class="blog-content mw7 center">
+    {{ $teaching := site.GetPage "section" "teaching" }}
+    {{ $pages := slice }}
+    {{ if $teaching }}
+      {{ $pages = where $teaching.RegularPagesRecursive "Draft" "!=" true }}
+    {{ else }}
+      {{ $pages = where .RegularPagesRecursive "Draft" "!=" true }}
+    {{ end }}
+    {{ $pages = first 4 ($pages.ByDate.Reverse) }}
+    {{ $total := len $pages }}
+
+    <div class="paper-list">
+      {{ range $i, $p := $pages }}
+      <div class="paper-item"{{ if eq $i 0 }} style="margin-top:0.5em;"{{ end }}>
+        <div class="paper-index">{{ sub $total $i }}.</div>
+        <div class="paper-content">
+          <div class="paper-authors">{{ or $p.Params.display_title $p.Title }}</div>
+          <div class="paper-status">{{ or $p.Params.display_date ($p.Date.Format "January 2, 2006") }}</div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+</main>
+{{ end }}

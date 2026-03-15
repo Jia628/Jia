@@ -1,5 +1,7 @@
 ---
 title: "Lorem Simpson"
+display_title: "Teaching Assistant - Math 211: Survey of Calculus I"
+display_date: "Fall 2025"
 subtitle: ""
 excerpt: "An .Rmarkdown post"
 date: 2021-05-26

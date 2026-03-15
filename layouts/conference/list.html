@@ -1,25 +1,86 @@
 {{ define "main" }}
 <main class="page-main pa4" role="main">
-  <section class="blog-intro mw7 center mb5">
+  <section class="blog-intro mw7 center mb3">
     <h2 class="f2 f1-ns lh-solid tc center fw4">{{ .Title | markdownify }}</h2>
-    {{ with .Description }}<p class="f6 f5-ns measure lh-copy tc center">{{ . | markdownify }}</p>{{ end }}
+    {{ with .Description }}<p class="f6 f5-ns lh-copy tl">{{ . | markdownify }}</p>{{ end }}
     {{ if .Params.show_author_byline }}<p class="f7 measure lh-copy tc center i">{{ if .Params.author }}Written by {{ .Params.author }}{{ end }}</p>{{ end }}
   </section>
 
   <section class="blog-content mw7 center">
-    {{ $paginator := .Paginate (where .RegularPages "Type" .Section).ByDate.Reverse }}
+    {{ $conferencePages := where (where .RegularPages "Type" .Section) "Draft" "!=" true }}
+    {{ $paginator := .Paginate $conferencePages.ByDate.Reverse }}
+    {{ $total := len $paginator.Pages }}
     <div class="paper-list">
       {{ range $i, $p := $paginator.Pages }}
       <div class="paper-item"{{ if eq $i 0 }} style="margin-top:0.5em;"{{ end }}>
-        <div class="paper-index">{{ add $i 1 }}.</div>
+        <div class="paper-index">{{ sub $total $i }}.</div>
         <div class="paper-content">
-          <a class="paper-title" href="{{ $p.RelPermalink }}" style="font-size:1.2em;">{{ $p.Title }}</a>
+          {{ if $p.Params.plain_title }}
+          <span style="font-size:1.05em;font-style:italic;font-weight:400;">{{ or $p.Params.display_title $p.Params.title }}</span>
+          {{ else }}
+          <a class="paper-title" href="{{ $p.RelPermalink }}" style="font-size:1.2em;">{{ or $p.Params.display_title $p.Params.title }}</a>
+          {{ end }}
           {{ with $p.Params.location }}<div class="paper-authors">{{ . }}</div>{{ end }}
-          <div class="paper-status">{{ $p.Date.Format "January 2, 2006" }}{{ with $p.Params.date_end }} to {{ (time .).Format "January 2, 2006" }}{{ end }}</div>
+          <div class="paper-status">{{ if $p.Params.date_end }}{{ $start := $p.Date }}{{ $end := time $p.Params.date_end }}{{ if eq ($start.Format "January 2006") ($end.Format "January 2006") }}{{ $start.Format "January 2" }}-{{ $end.Format "2, 2006" }}{{ else }}{{ $start.Format "January 2, 2006" }} to {{ $end.Format "January 2, 2006" }}{{ end }}{{ else }}{{ $p.Date.Format "January 2, 2006" }}{{ end }}</div>
         </div>
       </div>
       {{ end }}
     </div>
+
+    <span style="display:block;text-align:left;color:#77186a;font-size:1.6em;font-weight:700;margin-top:1.5rem;margin-bottom:0.2rem;margin-left:0;padding-left:0;text-indent:0;">Attended Conferences and Workshops</span>
+
+    <div class="paper-list">
+      <div class="paper-item" style="margin-top:0.5em;">
+        <div class="paper-index">{{ add $total 5 }}.</div>
+        <div class="paper-content">
+          <div class="paper-authors">Dynamics and Geometry Conference - Rice University, Houston (upcoming)</div>
+          <div class="paper-status">April 10-12, 2026</div>
+        </div>
+      </div>
+
+      <div class="paper-item" style="margin-top:0.5em;">
+        <div class="paper-index">{{ add $total 4 }}.</div>
+        <div class="paper-content">
+          <div class="paper-authors">Topological and Geometric Structures in Low Dimensions - SLMath, Berkeley</div>
+          <div class="paper-status">January 20 - March 27, 2026</div>
+        </div>
+      </div>
+
+      <div class="paper-item" style="margin-top:0.5em;">
+        <div class="paper-index">{{ add $total 3 }}.</div>
+        <div class="paper-content">
+          <div class="paper-authors">3-Manifolds, Groups, Varieties - Rutgers University, Newark</div>
+          <div class="paper-status">October 4-5, 2025</div>
+        </div>
+      </div>
+
+      <div class="paper-item" style="margin-top:0.5em;">
+        <div class="paper-index">{{ add $total 2 }}.</div>
+        <div class="paper-content">
+          <div class="paper-authors">Midwest Summer School in Geometry, Topology, and Dynamics - University of Wisconsin-Madison</div>
+          <div class="paper-status">June 2-6, 2025</div>
+        </div>
+      </div>
+
+      <div class="paper-item" style="margin-top:0.5em;">
+        <div class="paper-index">{{ add $total 1 }}.</div>
+        <div class="paper-content">
+          <div class="paper-authors">Recent Development in Geometric Group Theory - The University of Tennessee, Knoxville</div>
+          <div class="paper-status">May 19-22, 2025</div>
+        </div>
+      </div>
+
+      {{ range $i, $p := $paginator.Pages }}
+      <div class="paper-item">
+        <div class="paper-index">{{ sub $total $i }}.</div>
+        <div class="paper-content">
+          {{ with (or $p.Params.attended_location $p.Params.location) }}<div class="paper-authors">{{ . }}</div>{{ end }}
+          <div class="paper-status">{{ with $p.Params.attended_date_display }}{{ . }}{{ else }}{{ if $p.Params.date_end }}{{ $start := $p.Date }}{{ $end := time $p.Params.date_end }}{{ if eq ($start.Format "January 2006") ($end.Format "January 2006") }}{{ $start.Format "January 2" }}-{{ $end.Format "2, 2006" }}{{ else }}{{ $start.Format "January 2, 2006" }} to {{ $end.Format "January 2, 2006" }}{{ end }}{{ else }}{{ $p.Date.Format "January 2, 2006" }}{{ end }}{{ end }}</div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
     {{ partial "shared/list-pagination.html" . }}
   </section>
 </main>
