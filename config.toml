@@ -118,7 +118,7 @@ enableEmoji = true
     weight = 3
   [[menu.header]]
     name = "cv"
-    title = "CV"
+    title = "Life"
     url = "/teaching/"
     weight = 4
     

@@ -1,14 +1,13 @@
 ---
-title: A Blog That Works
+title: Life Outside Math
 description: |
-  This is a fully featured blog that supports categories, 
-  tags, series, and pagination.
+  Outside of math, I enjoy playing the piano, Kpop and jazz dancing, fitness and exploring restaurants all over the world!
 author: "The R Markdown Team @RStudio"
 show_post_thumbnail: true
-show_author_byline: true
+show_author_byline: false
 show_post_date: true
 # for listing page layout
-layout: list-sidebar # list, list-sidebar, list-grid
+layout: list # list, list-sidebar, list-grid
 
 # for list-sidebar layout
 sidebar: 

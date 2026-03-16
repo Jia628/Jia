@@ -1,13 +1,14 @@
 ---
-title: "Lorem Star Wars"
+title: "Chopin Scherzo No.2"
 subtitle: "How to add panelsets in plain markdown posts."
 display_title: "Teaching Assistant - Math 221: Calculus and Analytic Geometry I"
 display_date: "Fall 2024"
 date: 2021-05-25
 author: "Alison Hill"
-draft: false
+draft: true
 # layout options: single, single-sidebar
 layout: single
+external_url: "https://www.bilibili.com/video/BV1iQymYUEDd/?spm_id_from=333.1387.homepage.video_card.click"
 categories:
 - Theme features
 ---

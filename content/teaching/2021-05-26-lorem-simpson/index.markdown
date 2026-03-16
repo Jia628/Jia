@@ -1,10 +1,10 @@
 ---
-title: "Lorem Simpson"
+title: "Beethoven Piano Sonata No.23, Op.57, Appasionata III"
 display_title: "Teaching Assistant - Math 211: Survey of Calculus I"
-display_date: "Fall 2025"
+display_date: "April 26, 2025"
 subtitle: ""
-excerpt: "An .Rmarkdown post"
-date: 2021-05-26
+excerpt: "Collins Recital Hall, Hamel Music Center, Madison"
+date: 2025-04-26
 author: "Alison Hill"
 draft: false
 images:
@@ -12,6 +12,7 @@ series:
 tags:
 categories:
 layout: single
+external_url: "https://www.bilibili.com/video/BV1P7jPzLE2Y/?spm_id_from=333.337.search-card.all.click"
 ---
 
 {{< here >}}

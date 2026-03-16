@@ -76,6 +76,38 @@ body {
   text-decoration: underline;
 }
 
+.life-instagram-icon {
+  color: #77186a;
+  font-size: 1.7rem;
+}
+
+.life-bilibili-icon {
+  color: #77186a;
+  font-size: 1.55rem;
+}
+
+.life-instagram-link,
+.life-instagram-link:visited,
+.life-instagram-link:hover,
+.life-instagram-link:focus,
+.life-bilibili-link,
+.life-bilibili-link:visited,
+.life-bilibili-link:hover,
+.life-bilibili-link:focus {
+  text-decoration: none;
+}
+
+.life-instagram-icon:hover,
+.life-instagram-icon:focus,
+.life-instagram-link:hover .life-instagram-icon,
+.life-instagram-link:focus .life-instagram-icon,
+.life-bilibili-icon:hover,
+.life-bilibili-icon:focus,
+.life-bilibili-link:hover .life-bilibili-icon,
+.life-bilibili-link:focus .life-bilibili-icon {
+  color: #627354;
+}
+
 .paper-list {
   width: 100%;
 }
@@ -122,4 +154,52 @@ body {
 .paper-authors,
 .paper-status {
   margin-top: 0.1rem;
+}
+
+/* Make the long Beethoven title in the Life list slightly smaller. */
+.blog-content a[href*="BV1P7jPzLE2Y"] {
+  font-size: 0.88em;
+}
+
+/* Narrow the home layout on wide screens while keeping it centered. */
+@media screen and (min-width: 60em) {
+  .home {
+    --home-picture-x-offset: 1.4rem;
+  }
+
+  .home .site-header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .home .site-header .site-nav,
+  .home .page-main .page-content {
+    max-width: 78rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home .page-main .home-intro-image-wrap {
+    width: 40%;
+    flex: 0 0 40%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .home .page-main .home-intro-copy {
+    width: 60%;
+    flex: 0 0 60%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .home .page-main .page-content > .flex-l {
+    column-gap: 1.5rem;
+  }
+
+  .home .page-main .home-intro-image-wrap img {
+    width: 78%;
+    max-width: 100%;
+    transform: translateX(var(--home-picture-x-offset));
+  }
 }

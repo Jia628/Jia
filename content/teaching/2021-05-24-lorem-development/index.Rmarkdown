@@ -1,14 +1,16 @@
 ---
-title: "Project Asst-Grader/Reader"
+title: "Chopin Scherzo No.2"
 display_title: "Project Asst-Grader/Reader - Math 742: Abstract Algbebra II"
 display_date: "Spring 2024"
 subtitle: "How to add panelsets in R Markdown posts."
-excerpt: "Add tabbed sections with code and results."
+excerpt: "George L. Mosse Humanities Building, Madison"
 date: 2021-05-24
 author: "Alison Hill"
 draft: false
 # layout options: single, single-sidebar
 layout: single
+external_url: "https://www.bilibili.com/video/BV1iQymYUEDd/?spm_id_from=333.1387.homepage.video_card.click"
+show_post_date: false
 categories:
 - evergreen
 ---

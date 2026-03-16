@@ -1,9 +1,9 @@
 ---
 title: "Jia Wan"
 subtitle: "University of Wisconsin-Madison"
-description: "I am a 2nd year math PhD student in University of Wisconsin-Madison, luckily working with my excellent advisor [Autumn Kent](https://people.math.wisc.edu/~aekent2/). I received a B.S. in Mathematics from the Southern University of Science and Technology (SUSTech), Shenzhen, China, in 2023 and an M.S. in Mathematics from the University of Wisconsin-Madison in 2024.<br><br>My research interest focuses on low-dimensional topology and geometric group theory. Specifically, my recent paper is related to quasi-Fuchsian surfaces in hyperbolic 3-manifolds and surface subgroups in the mapping class groups. <br><br><span class='f5 fw7 ttu tracked' style='color:#77186A;'>Email:</span> [wan44@wisc.edu](mailto:wan44@wisc.edu)<br><br><span class='f5 fw7 ttu tracked' style='color:#77186A;'>Office:</span> <span style='font-size:0.9em;'>Van Vleck 716</span>"
+description: "I am a 2nd year math PhD student in University of Wisconsin-Madison, luckily working with my excellent advisor [Autumn Kent](https://people.math.wisc.edu/~aekent2/). I received a B.S. in Mathematics from the Southern University of Science and Technology (SUSTech), Shenzhen, China, in 2023 and an M.S. in Mathematics from the University of Wisconsin-Madison in 2024.<br><br>My research interest focuses on low-dimensional topology and geometric group theory. Specifically, my recent paper is related to quasi-Fuchsian surfaces in hyperbolic 3-manifolds and surface subgroups in the mapping class groups.<br><br>Email: [wan44@wisc.edu](mailto:wan44@wisc.edu)<br><br>Office: Van Vleck 716<br><br>CV: [Jia Wan](/CV_PhD.pdf)"
 images:
-  - img/revoir.jpg
+  - img/jia.JPG
 image_left: true
 text_align_left: true
 show_social_links: true # specify social accounts in site config

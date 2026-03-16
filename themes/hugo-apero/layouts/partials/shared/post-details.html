@@ -1,8 +1,14 @@
 <details {{ .Scratch.Get "details" }} class="f6 fw7 input-reset">
+  {{ $showPostDate := true }}
+  {{ if isset .Params "show_post_date" }}
+    {{ $showPostDate = .Params.show_post_date }}
+  {{ end }}
+  {{ if $showPostDate }}
   <dl class="f6 lh-copy">
     <dt class="fw7">Posted on:</dt>
     <dd class="fw5 ml0">{{ .PublishDate.Format "January 2, 2006" }}</dd>
   </dl>
+  {{ end }}
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
     <dd class="fw5 ml0">{{ .ReadingTime }} minute read, {{ .WordCount }} words</dd>
