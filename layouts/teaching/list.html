@@ -18,7 +18,9 @@
   </section>
   <section class="blog-content mw7 center">
     {{ $caller := . }}
-    {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" .Section).ByDate.Reverse }}
+    {{ $teachingPages := where (where .RegularPagesRecursive "Type" .Section) "Draft" "!=" true }}
+    {{ $lifePages := first 2 ($teachingPages.ByDate.Reverse) }}
+    {{ $paginator := .Paginate $lifePages }}
       {{ range $paginator.Pages }}
         {{ .Scratch.Set "$root" $caller }}
         {{ partial "shared/summary" . }}

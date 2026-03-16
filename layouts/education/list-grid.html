@@ -6,26 +6,38 @@
   </section>
 
   <section class="blog-content mw7 center">
-    {{ $teaching := site.GetPage "section" "teaching" }}
-    {{ $pages := slice }}
-    {{ if $teaching }}
-      {{ $pages = where $teaching.RegularPagesRecursive "Draft" "!=" true }}
-    {{ else }}
-      {{ $pages = where .RegularPagesRecursive "Draft" "!=" true }}
-    {{ end }}
-    {{ $pages = first 4 ($pages.ByDate.Reverse) }}
-    {{ $total := len $pages }}
-
     <div class="paper-list">
-      {{ range $i, $p := $pages }}
-      <div class="paper-item"{{ if eq $i 0 }} style="margin-top:0.5em;"{{ end }}>
-        <div class="paper-index">{{ sub $total $i }}.</div>
+      <div class="paper-item" style="margin-top:0.5em;">
+        <div class="paper-index">4.</div>
         <div class="paper-content">
-          <div class="paper-authors">{{ or $p.Params.display_title $p.Title }}</div>
-          <div class="paper-status">{{ or $p.Params.display_date ($p.Date.Format "January 2, 2006") }}</div>
+          <div class="paper-authors">Teaching Assistant - Math 211: Survey of Calculus I</div>
+          <div class="paper-status">Fall 2025</div>
         </div>
       </div>
-      {{ end }}
+
+      <div class="paper-item">
+        <div class="paper-index">3.</div>
+        <div class="paper-content">
+          <div class="paper-authors">Teaching Assistant - Math 221: Calculus and Analytic Geometry I</div>
+          <div class="paper-status">Fall 2024</div>
+        </div>
+      </div>
+
+      <div class="paper-item">
+        <div class="paper-index">2.</div>
+        <div class="paper-content">
+          <div class="paper-authors">Project Asst-Grader/Reader - Math 742: Abstract Algbebra II</div>
+          <div class="paper-status">Spring 2024</div>
+        </div>
+      </div>
+
+      <div class="paper-item">
+        <div class="paper-index">1.</div>
+        <div class="paper-content">
+          <div class="paper-authors">Project Asst-Grader/Reader - Math 113: Trigonometry</div>
+          <div class="paper-status">Fall 2023</div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
